@@ -55,7 +55,7 @@ h2 {
     font-family: var(--heading-font);
 }
 
-div {
+#content {
     max-width: 1600px;
     margin: 0 auto;
 }
