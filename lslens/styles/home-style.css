@@ -1,0 +1,120 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+:root {
+    --heading-font: Cinzel;
+    --paragraph-font: Lato;
+}
+body {
+    background-color: #e8cdcc;
+}
+
+header {
+    background-color: #d7a7aa;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+#logo-link {
+    grid-column: 2/4;
+    padding: 15px;
+    align-self: center;
+    justify-self: center;
+}
+
+header .logo {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+header nav {
+    grid-column: 1/5;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 15px;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    font-family: var(--paragraph-font);
+    background-color: #e8cdcc;
+    border-radius: 10px;
+    color: black;
+}
+
+nav a:hover {
+    background-color: white;
+    color: red;
+}
+
+#hero-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    margin-bottom: 80px;
+    
+}
+
+#hero-img {
+    max-width: 2000px;
+    width: 100%;
+    grid-column: 1/5;
+    grid-row: 1/2;
+    z-index: 1;
+
+}
+
+#hero-msg {
+    text-align: center;
+    grid-column: 1/5;
+    z-index: 2;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+    font-size: 2em;
+    font-family: var(--heading-font);
+    color:rgb(75, 9, 9);
+}
+
+.review-box {
+    background-color:#a6826c;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 50px;
+    border: 5px solid black;
+}
+
+#flower-bride {
+    grid-column: 1/2;
+    width: 100%;
+    align-self: center;
+    border: 5px solid transparent;
+}
+
+.review-box p {
+    grid-column: 2/3;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    font-size: 2em;
+    justify-self: center;
+    border: 5px solid transparent;
+}
+
+#hand-holding {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
