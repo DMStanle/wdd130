@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <link rel="stylesheet" href="styles/contactus.css">
 </head>
 <body>
     <header>
@@ -13,69 +14,82 @@
         <nav>
     
             <a href="index.html">Home</a>
-            <a href="meettheteam.html">Meet the Team</a>
             <a href="contactus.html">Contact Us</a>
+            <a href="meettheteam.html">Meet the Team</a>
         </nav>
     </header>
+<main>
     <div id="hero">
         <div id="hero-box">
-        <section id="hero-msg">
             <h1 class="mtt-title">Contact Us</h1>
-        </section>
         </div>
     </div>
-<main>
-<img class="flowerbride" src="images/flowerbride.png" alt="flowerbride">
-<div id="contact">
-    <form action="/my-handling-form-page" method="post">
-        <p>
-            <label for="name">First and last name:</label>
-            <input type="text" id="name" name="user_name" />
-        </p>
-        <p>
-            <label for="mail">Email:</label>
-            <input type="email" id="mail" name="user_email" />
-        </p>
-        <p>
-            <label for="date">When is the wedding day?</label>
-            <input type="date" id="date" name="wedding_date">
-        </p>
-        <p>
-            <label for="like_to_know">Anything you would like us to know?</label>
-            <textarea name="user_message" id="like_to_know"></textarea>
-        </p>
-        <p class="button">
-            <button type="submit">Submit</button>
-        </p>
-    </form>
+    <div id="parent-grid">
+        <img class="flowerbride" src="images/flowerbride.png" alt="flowerbride">
+        <div id="contact">
+            <div id="feedback" style="display:none;"></div>
+            <form action="/my-handling-form-page" method="post">
+                <p>
+                    <label for="name">First and last name:</label>
+                    <input type="text" id="name" name="user_name" />
+                </p>
+                <p>
+                    <label for="mail">Email:</label>
+                    <input type="email" id="mail" name="user_email" />
+                </p>
+                <p>
+                    <label for="date">When is the wedding day?</label>
+                    <input type="date" id="date" name="wedding_date">
+                </p>
+                <p>
+                    <label for="like_to_know">Anything you would like us to know?</label>
+                    <textarea name="user_message" id="like_to_know"></textarea>
+                </p>
+                <p class="button">
+                    <button type="submit">Submit</button>
+                </p>
+            </form>
+    </div>
 </div>
-<section class="poem">
-    <p>A spark, a glance, a tender start,<br>A garden blooms within the heart. <br>No need for words, just light above—<br>A quiet, endless gift of love.</p> 
-</section>
+<div id="parent-grid2">
+    <section class="poem">
+        <p>A spark, a glance, a tender start,<br>A garden blooms within the heart. <br>No need for words, just light above—<br>A quiet, endless gift of love.</p> 
+    </section>
+</div>
 <img class="sendoff" src="images/sendoff.png" alt="sendoff">
 </main>
-    <footer>
-        <p>Love Story Lens &copy; 2024 - Drew Stanley</p>
-        <p><a href="site-plan.html">Site Plan</a></p>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="">Meet the Team</a></p>
-        <p><a href="contactus.html">Contact Us</a></p>
-        <div class="logo-footer">
-            <a href="index.html" target="_blank">
-                <img src="images/lovestorylens.png" alt="logo-footer">
-            </a>
-        </div>
-        <div class="social media">
-            <a href="https://facebook.com" target="_blank">
-                <img src="images/facebook.png" alt="facebook icon">
-            </a>
-            <a href="https://twitter.com" target="_blank">
-                <img src="images/twitter.png" alt="twitter icon">
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <img src="images/instagram.png" alt="insta icon">
-            </a>  
-        </div>
-    </footer>
+<footer>
+    <p id="copy">Love Story Lens &copy; 2024 - Drew Stanley</p>
+    <p id="sp"><a href="site-plan.html">Site Plan</a></p>
+    <p id="h"><a href="index.html">Home</a></p>
+    <p id="cu"><a href="contactus.html">Contact Us</a></p>
+    <p id="mtt"><a href="meettheteam.html">Meet the Team</a></p>
+    <div class="logo-footer">
+        <a id="logo-link-footer" href="index.html">
+            <img class="logo-footer" src="images/lovestorylens.png" alt="logo-footer">
+        </a>
+    </div>
+    <div class="social-media">
+        <a href="https://facebook.com" target="_blank">
+            <img id="fb" src="images/facebook.png" alt="facebook icon">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <img src="images/twitter.png" alt="twitter icon">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="images/instagram.png" alt="insta icon">
+        </a>  
+    </div>
+</footer>
+<script>
+    const feedbackElement = document.getElementById('feedback');
+    const formElement = document.forms[0];
+    formElement.addEventListener('submit', function(e) {
+        e.preventDefault();
+        feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+        feedbackElement.style.display = "block";
+        document.body.classList.toggle('moveDown');
+    });
+</script>
 </body>
 </html>
